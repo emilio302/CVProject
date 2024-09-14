@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Settings, ChevronLeft, ChevronRight } from "lucide-react";
 import UpperBar from "./component/upperBar/UpperBar.tsx";
+import Joke from "./component/joke/Joke.tsx";
 import "./component/upperBar/UpperBar.css";
 
 // Componentes de secciones
@@ -71,6 +72,8 @@ const App = () => {
         return <ExperienceSection />;
       case "skills":
         return <SkillsSection />;
+      case "joke":
+        return <Joke />;
       case "other":
         return <OtherTopicsSection />;
       default:
@@ -80,8 +83,9 @@ const App = () => {
 
   return (
     <div className="flex h-screen bg-gray-100">
-      <header className="bg-white shadow-md p-4 flex justify-between items-center"></header>
-      <UpperBar setShowSettings={setShowSettings} showSettings={showSettings} />
+      <header className="bg-white shadow-md p-4 flex justify-between items-center">
+        <UpperBar setShowSettings={setShowSettings} showSettings={showSettings} />
+      </header>
       <main className="main">
         <Sidebar collapsed={collapsed} className="h-screen">
           <Menu>
@@ -101,9 +105,10 @@ const App = () => {
             <MenuItem
               icon={
                 <img
-                  src="/api/placeholder/24/24"
+                  src="https://cdn-icons-png.flaticon.com/512/1063/1063376.png"
                   alt="Experiencia"
                   className="rounded-full"
+                  width={25}
                 />
               }
               onClick={() => setActiveSection("experience")}
@@ -113,9 +118,10 @@ const App = () => {
             <MenuItem
               icon={
                 <img
-                  src="/api/placeholder/24/24"
+                  src="https://cdn-icons-png.flaticon.com/512/2502/2502399.png"
                   alt="Habilidades"
                   className="rounded-full"
+                  width={25}
                 />
               }
               onClick={() => setActiveSection("skills")}
@@ -125,9 +131,23 @@ const App = () => {
             <MenuItem
               icon={
                 <img
-                  src="/api/placeholder/24/24"
+                  src="https://cdn-icons-png.flaticon.com/512/5129/5129551.png"
+                  alt="Joke"
+                  className="rounded-full"
+                  width={25}
+                />
+              }
+              onClick={() => setActiveSection("joke")}
+            >
+              Joke
+            </MenuItem>
+            <MenuItem
+              icon={
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/2740/2740648.png"
                   alt="Otros"
                   className="rounded-full"
+                  width={25}
                 />
               }
               onClick={() => setActiveSection("other")}
