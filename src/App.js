@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Settings, ChevronLeft, ChevronRight } from "lucide-react";
-import UpperBar from "./component/upperBar/UpperBar";
+import UpperBar from "./component/upperBar/UpperBar.tsx";
 import "./component/upperBar/UpperBar.css";
 
 // Componentes de secciones

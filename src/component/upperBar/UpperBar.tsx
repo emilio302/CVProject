@@ -16,7 +16,7 @@ class UpperBar extends Component {
         </div>
         <button
           onClick={() => setShowSettings(!showSettings)}
-          className="p-2 rounded-full hover:bg-gray-200"
+          className="bSettings"
         >
           <Settings size={24} />
         </button>
