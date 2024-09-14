@@ -7,7 +7,7 @@ import "./component/upperBar/UpperBar.css";
 
 // Componentes de secciones
 const ExperienceSection = () => (
-  <div className="p-4">
+  <div className="experience-card">
     <h2 className="text-2xl font-bold mb-4">Experiencia</h2>
     <p className="mb-4">Resumen de experiencia...</p>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -33,7 +33,7 @@ const SkillsSection = () => (
       {["TypeScript", "React", "Node.js", "Python", "Excel"].map((skill) => (
         <div
           key={skill}
-          className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full animate-pulse"
+          className="skill-tag"
         >
           {skill}
         </div>
@@ -98,7 +98,7 @@ const App = () => {
                 )
               }
               onClick={() => setCollapsed(!collapsed)}
-              className="mb-4"
+              className="menu-item"
             >
               {!collapsed && <h2>Menú</h2>}
             </MenuItem>
@@ -156,7 +156,7 @@ const App = () => {
             </MenuItem>
           </Menu>
         </Sidebar>
-        <div className="flex-1 overflow-auto">{renderActiveSection()}</div>
+        <div className="content-section">{renderActiveSection()}</div>
       </main>
       {showSettings && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
