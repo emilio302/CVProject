@@ -1,0 +1,127 @@
+/* Estilos personalizados para la aplicación de CV */
+
+/* Fuentes personalizadas */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/* Variables de color personalizadas */
+:root {
+  --primary-color: #4f46e5;
+  --secondary-color: #7c3aed;
+  --background-color: #f3f4f6;
+  --text-color: #1f2937;
+  --accent-color: #10b981;
+}
+
+/* Estilos globales */
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+/* Estilos para encabezados */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Estilos personalizados para la barra lateral */
+.sidebar {
+  background-color: white;
+  border-right: 1px solid #e5e7eb;
+}
+
+.main {
+  display: flex;
+}
+
+/* Estilos para los elementos del menú */
+.menu-item {
+  transition: background-color 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: #eef2ff;
+}
+
+/* Estilos para las secciones de contenido */
+.content-section {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilos para las tarjetas de experiencia */
+.experience-card {
+  border-left: 4px solid var(--accent-color);
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Estilos para las etiquetas de habilidades */
+.skill-tag {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Animación para las habilidades */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.skill-tag:hover {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Estilos para el modal de configuración */
+.settings-modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.settings-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 24rem;
+  width: 100%;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .content-section {
+    padding: 1rem;
+  }
+
+  .experience-card {
+    border-left-width: 2px;
+  }
+}
