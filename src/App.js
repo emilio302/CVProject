@@ -5,31 +5,32 @@ import UpperBar from "./component/upperBar/UpperBar.tsx";
 import Joke from "./component/joke/Joke.tsx";
 import Lateralbar from "./component/lateralBar/LateralBar.tsx";
 import "./component/upperBar/UpperBar.css";
+import {List, ListItem, ListItemAvatar, Avatar, ListItemText } from '@mui/material';
 
 // Componentes de secciones
 const ExperienceSection = () => (
   <div className="experience-card">
-    <h2 className="text-2xl font-bold mb-4">Experiencia</h2>
-    <p className="mb-4">Resumen de experiencia...</p>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <h2>Experiencia</h2>
+    <p>Resumen de experiencia...</p>
+    <List className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {[1, 2, 3].map((job) => (
-        <div key={job} className="bg-white p-4 rounded-lg shadow">
-          <img
-            src={`/api/placeholder/50/50`}
-            alt="Logo"
-            className="w-12 h-12 mb-2"
+        <ListItem>
+           <ListItemAvatar>
+              <Avatar src="/static/images/avatar/1.jpg" />
+          </ListItemAvatar>
+          <ListItemText 
+            primary ={`Trabajo ${job}`}
+            secondary = {`Descripción del trabajo ${job}...`}
           />
-          <h3 className="text-lg font-semibold">Trabajo {job}</h3>
-          <p>Descripción del trabajo {job}...</p>
-        </div>
+        </ListItem>
       ))}
-    </div>
+    </List>
   </div>
 );
 
 const SkillsSection = () => (
   <div className="p-4">
-    <h2 className="text-2xl font-bold mb-4">Habilidades</h2>
+    <h2>Habilidades</h2>
     <div className="flex flex-wrap gap-2">
       {["TypeScript", "React", "Node.js", "Python", "Excel"].map((skill) => (
         <div
@@ -45,7 +46,7 @@ const SkillsSection = () => (
 
 const OtherTopicsSection = () => (
   <div className="p-4">
-    <h2 className="text-2xl font-bold mb-4">Otros Temas</h2>
+    <h2 >Otros Temas</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {[
         { title: "Aficiones", text: "Leer, viajar, fotografía" },

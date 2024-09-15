@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Settings } from "lucide-react";
-import profilePic from "./profile.svg";
 import { Link } from 'react-router-dom';
+import { Button, Avatar } from '@mui/material';
+import SettingsIcon from '@mui/icons-material/Settings';
 
 import "./UpperBar.css";
 
@@ -11,15 +11,19 @@ class UpperBar extends Component {
     return (
       <div className="upper-bar">
         <div className="profilePic">
-          <img src="/resources/images/profile.svg" alt="Perfil" className="profilePic" />
-          <h1 className="text-xl font-bold">Mi CV</h1>
+          <Avatar 
+          src="/resources/images/profile.svg" 
+          alt="Perfil" 
+          className="avatar"
+          sx={{ width: 50, height: 50 }}/>
+          <h1 className="cvTitle">Mi CV</h1>
         </div>
         <Link to="/settings">
-        <button
-          className="bSettings"
-        >
-          <Settings size={24} />
-        </button>
+          <Button
+            className="bSettings"
+            endIcon={<SettingsIcon />}
+          >
+          </Button>
         </Link>
       </div>
     );

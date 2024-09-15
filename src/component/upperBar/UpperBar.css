@@ -1,10 +1,21 @@
 .profilePic {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+  display: flex;  /* Hacer que el contenedor use Flexbox */
+  justify-content: space-between; /* Espaciado entre elementos */
   }
   
   .bSettings {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
   }
   
+  .cvTitle {
+    display: flex;
+    width: 100px;
+    white-space: nowrap;
+    padding: 5%;
+  }
+
+  .avatar {
+    padding: 5%;
+  }
