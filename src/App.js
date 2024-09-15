@@ -61,7 +61,7 @@ const OtherTopicsSection = () => (
 );
 
 // Componente principal
-const App = () => {
+function App() {
   const [collapsed, setCollapsed] = useState(true);
   const [activeSection, setActiveSection] = useState("experience");
   const [showSettings, setShowSettings] = useState(false);

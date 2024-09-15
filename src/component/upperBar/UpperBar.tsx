@@ -12,7 +12,7 @@ class UpperBar extends Component {
     return (
       <div className="upper-bar">
         <div className="profilePic">
-          <img src={profilePic} alt="Perfil" className="profilePic" />
+          <img src="/resources/images/profile.svg" alt="Perfil" className="profilePic" />
           <h1 className="text-xl font-bold">Mi CV</h1>
         </div>
         <Link to="/settings">
