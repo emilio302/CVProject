@@ -5,7 +5,7 @@ import UpperBar from "./component/upperBar/UpperBar.tsx";
 import Joke from "./component/joke/Joke.tsx";
 import Lateralbar from "./component/lateralBar/LateralBar.tsx";
 import "./component/upperBar/UpperBar.css";
-import {List, ListItem, ListItemAvatar, Avatar, ListItemText } from '@mui/material';
+import { List, ListItem, ListItemAvatar, Avatar, ListItemText } from '@mui/material';
 
 // Componentes de secciones
 const ExperienceSection = () => (
@@ -15,12 +15,12 @@ const ExperienceSection = () => (
     <List className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {[1, 2, 3].map((job) => (
         <ListItem>
-           <ListItemAvatar>
-              <Avatar src="/static/images/avatar/1.jpg" />
+          <ListItemAvatar>
+            <Avatar src="/static/images/avatar/1.jpg" />
           </ListItemAvatar>
-          <ListItemText 
-            primary ={`Trabajo ${job}`}
-            secondary = {`Descripción del trabajo ${job}...`}
+          <ListItemText
+            primary={`Trabajo ${job}`}
+            secondary={`Descripción del trabajo ${job}...`}
           />
         </ListItem>
       ))}
@@ -85,10 +85,12 @@ function App() {
   return (
     <div className="flex h-screen bg-gray-100">
       <header className="bg-white shadow-md p-4 flex justify-between items-center">
-        <UpperBar />
+        <div>
+          <UpperBar />
+        </div>
       </header>
       <main className="main">
-        <Lateralbar setActiveSection={setActiveSection} collapsed={collapsed} setCollapsed={setCollapsed}/>
+        <Lateralbar setActiveSection={setActiveSection} collapsed={collapsed} setCollapsed={setCollapsed} />
         <div className="content-section">{renderActiveSection()}</div>
       </main>
     </div>

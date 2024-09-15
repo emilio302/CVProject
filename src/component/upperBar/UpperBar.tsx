@@ -18,13 +18,14 @@ class UpperBar extends Component {
           sx={{ width: 50, height: 50 }}/>
           <h1 className="cvTitle">Mi CV</h1>
         </div>
-        <Link to="/settings">
-          <Button
-            className="bSettings"
-            endIcon={<SettingsIcon />}
-          >
-          </Button>
-        </Link>
+        <div className="bSettings">
+          <Link to="/settings">
+            <Button
+              endIcon={<SettingsIcon />}
+            >
+            </Button>
+          </Link>
+        </div>
       </div>
     );
   }
