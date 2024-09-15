@@ -7,7 +7,6 @@ import "./UpperBar.css";
 
 class UpperBar extends Component {
   render() {
-    const { setShowSettings, showSettings } = this.props;
 
     return (
       <div className="upper-bar">
@@ -17,7 +16,6 @@ class UpperBar extends Component {
         </div>
         <Link to="/settings">
         <button
-          onClick={() => setShowSettings(!showSettings)}
           className="bSettings"
         >
           <Settings size={24} />
