@@ -62,7 +62,7 @@ const OtherTopicsSection = () => (
 
 // Componente principal
 const App = () => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const [activeSection, setActiveSection] = useState("experience");
   const [showSettings, setShowSettings] = useState(false);
 

@@ -5,10 +5,7 @@ import { Link } from 'react-router-dom';
 
 import "./SettingsMenu.css";
 
-class SettingsMenu extends Component {
-  render() {
-    const { setShowSettings, showSettings } = this.props;
-
+function SettingsMenu() {
     return (
       <div className="settings-modal">
       <div className="settings-content">
@@ -22,7 +19,6 @@ class SettingsMenu extends Component {
       </div>
     </div>
     );
-  }
 }
 
 export default SettingsMenu;
